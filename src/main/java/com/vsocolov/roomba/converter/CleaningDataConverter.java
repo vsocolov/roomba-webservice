@@ -4,12 +4,14 @@ import com.vsocolov.roomba.data.CleaningData;
 import com.vsocolov.roomba.data.Point;
 import com.vsocolov.roomba.data.RoomSize;
 import com.vsocolov.roomba.data.request.CleaningRequest;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
+@Component
 public class CleaningDataConverter implements BaseConverter<CleaningRequest, CleaningData> {
 
     @Override

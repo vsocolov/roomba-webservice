@@ -11,7 +11,7 @@ import java.util.*;
 
 import static com.vsocolov.roomba.data.enums.Direction.North;
 
-@Service("cleaningService")
+@Service
 public class CleaningServiceImpl implements CleaningService {
 
     @Autowired
