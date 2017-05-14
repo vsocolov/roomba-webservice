@@ -1,6 +1,26 @@
 # roomba-webservice
 Implementing a simple webservice that resolve Roomba path problem
 
+## Installation notes
+To import and run this project please follow next steps:
+1. Download or clone project in your workplace directory.
+2. Run maven command: __mvn clean install__ in project directory.
+3. Open the project in your favorite IDE (It is a maven project, so it should be easy to import it).
+4. Run __RoombaWebserviceApplication.java__ class. It's a Spring Boot initialiser class.
+5. Open Postman, SoapUI or any other tool that is able to make REST requests to our local web service.
+6. Make a __POST__ request to __http://localhost:8080/roomba/clean__ with the following payload:
+```javascript
+{
+  "roomSize" : [5, 5],
+  "coords" : [1, 2],
+  "patches" : [
+    [1, 0],
+    [2, 2],
+    [2, 3]
+  ],
+  "instructions" : "NNESEESWNWW"
+}
+```
 
 ## Introduction
 
