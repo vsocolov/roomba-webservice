@@ -1,14 +1,24 @@
 package com.vsocolov.roomba.data.request;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 public class CleaningRequest implements Serializable {
+
+    @NotEmpty
+    @Size(min = 2, max = 2)
     private Integer[] roomSize;
 
+    @NotEmpty
+    @Size(min = 2, max = 2)
     private Integer[] coords;
 
+    @NotEmpty
     private Integer[][] patches;
 
+    @NotEmpty
     private String instructions;
 
     public Integer[] getRoomSize() {
